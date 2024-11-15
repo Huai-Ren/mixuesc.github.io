@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蜜雪冰城员工点单</title>
+    <style>
+        body {
+            background-image: url(mxbc.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+       .divLogin {
+            width: 30%;
+            margin: 200px auto;
+            border: 1px solid gainsboro;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px gray;
+            background-color: #fff;
+            opacity: 0.8;
+        }
+
+       .divValidate {
+            font-size: 30px;
+            line-height: 50px;
+        }
+    </style>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div class="divLogin">
+        <table class="table">
+            <tr>
+                <td colspan="2" align="center">
+                    <h3>蜜雪冰城员工点单</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>工号：</td>
+                <td>
+                    <input type="text" id="tName" placeholder="请输入工号" class="form-control">
+                </td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input type="password" id="tPwd" placeholder="请输入密码" class="form-control">
+                    <a href="javascript:showValidateTwo()">忘记密码</a>
+                </td>
+            </tr>
+            <tr>
+                <td>产品选择：<br><small>产品每周二更新</small></td>
+                <td>
+                    <select name="" id="" class="form-control">
+                        <option value="">柠檬水</option>
+                        <option value="">蜜桃四季春（新）</option>
+                        <option value="">茉莉奶绿</option>
+                        <option value="">东方乌龙轻乳茶</option>
+                        <option value="">三拼霸霸奶茶</option>
+                        <option value="">芋圆葡萄（升级版）</option>
+                        <option value="">菠萝甜心橙</option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>门店选择：<br><small>仅展示附近门店</small></td>
+                <td>
+                    <select name="" id="" class="form-control">
+                        <option value="">万景峰公寓底商28号商铺</option>
+                        <option value="">托普校内篮球场店</option>
+                        <option value="">西郡英华店</option>
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button id="btnLogin" class="vtn vtn-primary btn-lg btn-block" onclick="login()">提交订单</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script>
+    function showValidateTwo() {
+        document.querySelector('.divValidate').innerHTML = showValidate();
+    }
+    showValidateTwo();
+
+    function login() {
+        alert('恭喜你被坏人骗啦！');
+    }
+</script>
+
+</html>
