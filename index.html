@@ -5,33 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>蜜雪冰城员工点单</title>
-    <style>
+   <style>
+    /* 电脑端样式（原有的一些样式保持不变） */
+    body {
+        background-image: url(mxbc.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+  .divLogin {
+        width: 30%;
+        margin: 200px auto;
+        border: 1px solid gainsboro;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px gray;
+        background-color: #fff;
+        opacity: 0.8;
+    }
+
+  .divValidate {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    /* 以下是媒体查询部分，针对手机屏幕宽度进行样式调整 */
+    @media screen and (max-width: 768px) { 
+        /* 示例中以屏幕宽度小于等于768px作为手机端常见的判断条件，你可以根据实际测试情况调整这个数值 */
         body {
-            background-image: url(mxbc.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain; /* 让背景图片适应屏幕大小，避免在小屏幕上显示不全等问题，根据需求也可以设置成其他合适的背景图片显示方式 */
         }
 
-        * {
-            padding: 0;
-            margin: 0;
+      .divLogin {
+            width: 80%; /* 适当增大登录框占屏幕的宽度比例，让其在手机上显示更合理，可根据实际效果调整这个值 */
+            margin: 50px auto; /* 调整上下边距，使在手机上位置更合适 */
         }
 
-       .divLogin {
-            width: 30%;
-            margin: 200px auto;
-            border: 1px solid gainsboro;
-            border-radius: 10px;
-            box-shadow: 3px 3px 3px gray;
-            background-color: #fff;
-            opacity: 0.8;
+        table {
+            width: 100%; /* 让表格占满父元素宽度，避免出现水平滚动条等情况 */
         }
 
-       .divValidate {
-            font-size: 30px;
-            line-height: 50px;
+        input,
+        select,
+        button {
+            width: 100%; /* 让输入框、下拉选择框、按钮等元素占满所在单元格宽度，看起来更整齐 */
         }
-    </style>
+    }
+</style>
     <link rel="stylesheet" href="./bootstrap.min.css">
     <script src="./jquery-3.7.1.min.js"></script>
 </head>
